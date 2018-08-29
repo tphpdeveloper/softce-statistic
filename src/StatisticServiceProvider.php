@@ -8,18 +8,19 @@ class StatisticServiceProvider extends ServiceProvider
 {
 
     public function boot(){
-        $this->loadRoutesFrom(dirname(__DIR__).'/routes/web.php');
-        $this->loadViewsFrom(dirname(__DIR__) . '/views', 'promua');
-        $this->loadMigrationsFrom(dirname(__DIR__) . '/database/migrations');
 
-        $promua = DB::table('admin_menus')->where('name', 'Prom UA')->first();
-        if(is_null($promua)){
+        $this->loadRoutesFrom(dirname(__DIR__).'/src/routes/web.php');
+        $this->loadViewsFrom(dirname(__DIR__) . '/src/views', 'statistic');
+        $this->loadMigrationsFrom(dirname(__DIR__) . '/src/database/migrations');
+
+        $statistic = DB::table('admin_menus')->where('name', 'Статистика товаров')->first();
+        if(is_null($statistic)){
             DB::table('admin_menus')->insert([
-                'admin_menu_id' => 3,
-                'name' => 'Статистика',
-                'icon' => 'fa-chart-bar',
+                'admin_menu_id' => 1,
+                'name' => 'Статистика товаров',
+                'icon' => 'fa-bar-chart',
                 'route' => 'admin.statistic',
-                'o' => 2
+                'o' => 0
             ]);
         }
     }
