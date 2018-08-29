@@ -4,7 +4,7 @@ namespace Softce\Statistic;
 use Illuminate\Support\ServiceProvider;
 use DB;
 
-class StatisticServiceProvider
+class StatisticServiceProvider extends ServiceProvider
 {
 
     public function boot(){
