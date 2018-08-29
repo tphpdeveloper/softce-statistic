@@ -1,4 +1,4 @@
-# Work with module prom_ua
+# Work with module statistic
 
 **1.**
 ```php
