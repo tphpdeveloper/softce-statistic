@@ -1,0 +1,21 @@
+{
+    "name": "softce/statistic",
+    "description": "Module for show statistic visit the site on the day, and added, buyed product in cart.",
+    "authors": [
+        {
+            "name": "tphpdeveloper",
+            "email": "igorkutsan@ukr.net"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0",
+        "laravel/framework": "5.5.*"
+
+    },
+    "autoload": {
+        "psr-0": {
+            "Softce\\Statistic\\" : "vendor/softce/statistic/src"
+        }
+    }
+
+}
